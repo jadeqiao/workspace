@@ -5,7 +5,7 @@ Word Processor processes a List of Strings and applies the following business ru
 - longer/shorter than "Length"(i.e. 5) characters
 
 2.Solution:
-Build a web site, input strings need to be filter and filter rules, return filtered strings.
+Build a web site, input strings and filter rules, return filtered strings.
 
 3.project structure
 + java file: 
