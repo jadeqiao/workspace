@@ -1,13 +1,13 @@
 # workspace
-1.Requirement:
+1.Requirement: 
 Word Processor processes a List of Strings and applies the following business rules:
 - start/end with "String"(i.e. "M" or "m")
 - longer/shorter than "Length"(i.e. 5) characters
 
-2.Solution:
-Build a web site, input strings and filter rules, return filtered strings.
+2.Solution
+- Build a web site, input strings and filter rules, return filtered strings.
 
-3.project structure
+3.Project structure
 + java file: 
 - com.example.demo
   ---Application.java----start SpringBoot and configure mvc
@@ -25,3 +25,6 @@ Build a web site, input strings and filter rules, return filtered strings.
 - word.html---display input strings, filter rules and result strings
 - base.html---template page
 - error.html---error page
+
+4. Extension
+- If business rules change and new ones pop up all the time, define new filter elements in Rule entity, it will provide rule repository and all kinds of combinations.
