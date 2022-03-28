@@ -1,0 +1,49 @@
+{% extends "_base.html" %}
+
+{% block main %}
+
+<form method="post" action="/count">
+  <h3>Word Processor</h3>
+  <h5>Word Processor processes a List of Strings and applies the following business rules:
+- start/end with "String"(i.e. "M" or "m")
+- longer/shorter than "Length"(i.e. 5) characters</h5>
+  {% if error != null %}
+  <div class="form-group">
+    <p id="error" class="text-danger">{{ error }}</p>
+  </div>
+  {% endif %}
+  <div class="form-group">
+    <label>Input String(seperate by ,)</label>
+    <input name="inputStr" type="text" class="form-control" placeholder="Input Strings(length:1~200)" value="{{ inputStr }} " minlength="1" maxlength="200">
+  </div>
+  <div class="form-group">
+    <label>Start String(ignore case)</label>
+    <input name="startStr" type="text" class="form-control" placeholder="With start String" value="{{ rule.startStr }}"  maxlength="20">
+  </div>
+  <div class="form-group">
+    <label>End String(ignore case)</label>
+    <input name="endStr" type="text" class="form-control" placeholder="With end String" value="{{ rule.endStr }}"  maxlength="20">
+  </div>
+  <div class="form-group">
+    <label>Minimum Length</label>
+    <input name="minLength" type="number" class="form-control" placeholder="Longer than" value="{{ rule.minLength }}" maxlength="100">
+  </div>
+  <div class="form-group">
+    <label>Maximum Length</label>
+    <input name="maxLength" type="number" class="form-control" placeholder="Shorter than" value="{{ rule.maxLength }}" maxlength="100">
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-outline-primary">Submit</button>
+  </div>
+    <div class="form-group">
+  	<label>Result String</label>
+    <p id="resultStr" class="form-control">{{ resultStr }}</p>
+  </div>
+  <div class="form-group">
+  	<label>Result String Number</label>
+    <p id="resultNum" class="form-control">{{ resultNum }}</p>
+  </div>
+</form>
+
+{% endblock %}
